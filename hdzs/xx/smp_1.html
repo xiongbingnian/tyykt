@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="renderer" content="webkit" >
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+    <title>体育云课堂</title>
+    <link rel="stylesheet" href="../../css/hdzs.css">
+    <!--[if lt IE 9]>
+    <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <![endif]-->
+</head>
+<body class="bg_373B47">
+	<div class="cont">
+		<div class="header">
+			<img src="../../img/hdzs/logo.png" alt="" />
+			<h2>撕名牌（第一部分）</h2>
+		</div>
+		<div class="d_box">
+			<ul class="d_list">
+				<li>
+					<img src="../../img/hdzs/liang.png" alt="" />
+				</li>
+				<li>
+					<img src="../../img/hdzs/mie.png" alt="" />
+				</li>
+				<li>
+					<img src="../../img/hdzs/liang.png" alt="" />
+				</li>
+				<li>
+					<img src="../../img/hdzs/mie.png" alt="" />
+				</li>
+				<li>
+					<img src="../../img/hdzs/liang.png" alt="" />
+				</li>
+				<li>
+					<img src="../../img/hdzs/liang.png" alt="" />
+				</li>
+				<li>
+					<img src="../../img/hdzs/liang.png" alt="" />
+				</li>
+				<li>
+					<img src="../../img/hdzs/mie.png" alt="" />
+				</li>
+				<li>
+					<img src="../../img/hdzs/liang.png" alt="" />
+				</li>
+				<li>
+					<img src="../../img/hdzs/mie.png" alt="" />
+				</li>
+				<li>
+					<img src="../../img/hdzs/liang.png" alt="" />
+				</li>
+				<li>
+					<img src="../../img/hdzs/mie.png" alt="" />
+				</li>
+				<li>
+					<img src="../../img/hdzs/liang.png" alt="" />
+				</li>
+				<li>
+					<img src="../../img/hdzs/liang.png" alt="" />
+				</li>
+				<li>
+					<img src="../../img/hdzs/liang.png" alt="" />
+				</li>
+				<li>
+					<img src="../../img/hdzs/mie.png" alt="" />
+				</li>
+			</ul>
+			<div class="d_js_hdsm_box">
+				<div class="js_bg">
+					<div class="js_box">
+						<img src="../../img/hdzs/i_clock.png" alt="" />
+						<div class="js">
+							<span class="min">00</span>:<span class="ms">00</span>.<span class="hm">00</span>
+						</div>
+					</div>
+				</div>
+				<div class="d_hdsm_box">
+					<h3>活动说明：</h3>
+					<p>参加活动的人可随意扑灭任何一个亮灯的光标</p>
+				</div>
+			</div>
+		</div>
+		
+	</div>
+
+<script src="../../js/jquery-1.11.3.min.js"></script>
+<script type="text/javascript">
+	//计时
+	$(document).ready(function() {
+		var times = 120 * 100; // 120秒 2分钟
+		countTime = setInterval(function() {
+			times = --times < 0 ? 0 : times;
+			
+			var min = Math.floor(times / 100 / 60).toString();
+			if(min.length <= 1) {
+				min = "0" + min;
+			}
+			
+			var ms = Math.floor(times / 100 %60).toString();
+			if(ms.length <= 1) {
+				ms = "0" + ms;
+			}
+			
+			var hm = Math.floor(times % 100).toString();
+			if(hm.length <= 1) {
+				hm = "0" + hm;
+			}
+			if(times == 0) {
+				clearInterval(countTime);
+				//alert("游戏结束");
+			}
+			// 获取分钟、秒、毫秒数
+			$(".min").html(min);
+			$(".ms").html(ms);
+			$(".hm").html(hm);
+		}, 10);
+	});
+</script>
+</body>
+</html>	

@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="renderer" content="webkit" >
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+    <title>体育云课堂</title>
+    <link rel="stylesheet" href="./css/common.css">
+    <!--[if lt IE 9]>
+    <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+    <div class="header">
+    	<div class="auto">
+    		<a href="">
+    			<img class="logo_img" src="img/logo.png" alt="" />
+    		</a>
+    		<div class="right">
+    			<ul class="nav_list">
+    				<li>
+    					<a href="index.html">首页</a>
+    				</li>
+    				<li>
+    					<a href="kcdt.html">课堂动态</a>
+    				</li>
+    				<li>
+    					<a class="active" href="ktdsj.html">课堂大数据</a>
+    				</li>
+    				<li>
+    					<a href="jxzyk.html">教学资源库</a>
+    				</li>
+    				<li>
+    					<a href="jsfzypx.html">教师发展与培训</a>
+    				</li>
+    				<li>
+    					<a href="xsxlyzd.html">学生训练与指导</a>
+    				</li>
+    			</ul>
+    			<a class="btn_login" href="login.html">登录</a>
+    		</div>
+    	</div>
+    </div>
+    <div class="section">
+    	<!--学情总览 开始-->
+        <div class="bg_F8F8F8">
+        	<div class="auto xqzl_box">
+        		<h3 class="sub_title">学情总览：</h3>
+        		<ul class="xqzl_list">
+        			<li class="xqzl_li_1">
+        				<b>10</b>
+        				<div>已上课次数</div>
+        			</li>
+        			<li class="xqzl_li_2">
+        				<b>1000</b>
+        				<div>已上课时长</div>
+        			</li>
+        			<li class="xqzl_li_3">
+        				<b>10</b>
+        				<div>已上课班级数</div>
+        			</li>
+        			<li class="xqzl_li_4">
+        				<b>1000</b>
+        				<div>体育活动次数</div>
+        			</li>
+        			<li class="xqzl_li_5">
+        				<b>5</b>
+        				<div>班级平均活动次数</div>
+        			</li>
+        		</ul>
+        	</div>
+        </div>
+        <!--学情总览 结束-->
+        <!--教学质量 开始-->
+        <div class="auto p_t_b_30">
+        	<h3 class="sub_title">教学质量：</h3>
+        	<div class="jxzl_chart_box">
+        		<div id="jxzl_chart"></div>
+        		<p class="tj">截止目前，本学期平均出勤47人，1次满勤，8次有人缺勤</p>
+        	</div>
+        </div>
+        <!--教学质量 结束-->
+        <!--体能素质 开始-->
+        <div class="bg_F8F8F8">
+	        <div class="auto p_t_b_30">
+	        	<h3 class="sub_title">体能素质：</h3>
+	        	<div class="tnsz_chart_box">
+	        		<div id="tnsz_chart"></div>
+	        		<p class="tj">截止目前，本班学生速度、灵敏与协调能力最好，耐力偏弱整体体能素质发展相对平衡，杨洋速度最好</p>
+	        	</div>
+	        </div>
+        </div>
+        <!--体能素质 结束-->
+        <!--运动量班级排行榜 开始-->
+        <div class="auto p_t_b_30">
+        	<h3 class="sub_title">运动量班级排行榜：</h3>
+        	<div class="ydl_chart_box">
+        		<div id="ydl_chart" ></div>
+        		<p class="tj">截止目前，本学期全班平均运动密度70%，全部高于40%，7天高于60%，平均达到运动强度时间为23.8min。</p>
+        	</div>
+        </div>
+        <!--运动量班级排行榜 结束-->
+        <!--优秀班级排行榜 开始-->
+        <div class="bg_F8F8F8">
+	        <div class="auto p_t_b_30">
+	        	<h3 class="sub_title">优秀班级排行榜：</h3>
+	        	<div class="pm">
+	        		<table class="pm_table">
+		        		<tr>
+		        			<th>排名</th>
+		        			<th>班级排名</th>
+		        			<th>综合评分</th>
+		        			<th>力量</th>
+		        			<th>速度</th>
+		        			<th>协调</th>
+		        			<th>柔韧</th>
+		        			<th>平衡</th>
+		        			<th width="100px">耐力</th>
+		        		</tr>
+		        		<tr class="pm_tr_1">
+		        			<td>
+		        				<img src="img/pm_1.png" alt="" />
+		        			</td>
+		        			<td>一年级二班</td>
+		        			<td>90分</td>
+		        			<td>80分</td>
+		        			<td>80分</td>
+		        			<td>70分</td>
+		        			<td>60分</td>
+		        			<td>80分</td>
+		        			<td>90分</td>
+		        		</tr>
+		        		<tr class="pm_tr_2">
+		        			<td>
+		        				<img src="img/pm_2.png" alt="" />
+		        			</td>
+		        			<td>一年级一班</td>
+		        			<td>90分</td>
+		        			<td>80分</td>
+		        			<td>80分</td>
+		        			<td>70分</td>
+		        			<td>60分</td>
+		        			<td>80分</td>
+		        			<td>90分</td>
+		        		</tr>
+		        		<tr class="pm_tr_3">
+		        			<td>
+		        				<img src="img/pm_3.png" alt="" />
+		        			</td>
+		        			<td>一年级四班</td>
+		        			<td>90分</td>
+		        			<td>80分</td>
+		        			<td>80分</td>
+		        			<td>70分</td>
+		        			<td>60分</td>
+		        			<td>80分</td>
+		        			<td>90分</td>
+		        		</tr>
+		        		<tr class="pm_tr_4">
+		        			<td>
+		        				<img src="img/pm_4.png" alt="" />
+		        			</td>
+		        			<td>一年级五班</td>
+		        			<td>90分</td>
+		        			<td>80分</td>
+		        			<td>80分</td>
+		        			<td>70分</td>
+		        			<td>60分</td>
+		        			<td>80分</td>
+		        			<td>90分</td>
+		        		</tr>
+		        		<tr class="pm_tr_5">
+		        			<td>
+		        				<img src="img/pm_5.png" alt="" />
+		        			</td>
+		        			<td>一年级三班</td>
+		        			<td>90分</td>
+		        			<td>80分</td>
+		        			<td>80分</td>
+		        			<td>70分</td>
+		        			<td>60分</td>
+		        			<td>80分</td>
+		        			<td>90分</td>
+		        		</tr>
+		        	</table>
+	        	</div>
+	        </div>
+        </div>
+        <!--优秀班级排行榜 结束-->
+    </div>
+    <div class="footer">
+    	Copyright©2018青岛思迈教育科技有限公司
+    </div>
+</body>
+<script src="./js/jquery-1.11.3.min.js"></script>
+<script src="./js/highcharts.js"></script>
+<script src="./js/highcharts-more.js"></script>
+<script>
+	//教学质量
+	var chart = Highcharts.chart('jxzl_chart', {
+         chart: {
+	        type: 'areaspline',
+	        backgroundColor:'#fff'
+	    },
+	    title: {
+	        text: '出勤情况',
+	        style: {
+	        	color: "#28CEA5",
+	        	fontWeight: "600"
+	        }
+	    },
+	    legend: {
+	        layout: 'vertical',
+	        align: 'left',
+	        verticalAlign: 'top',
+	        x: 150,
+	        y: 100,
+	        floating: true,
+	        borderWidth: 1,
+	        enabled: false
+	    },
+	    xAxis: {
+	    	tickWidth: 0,   //去掉x轴刻刻度
+	        categories: ['07/01','07/02','07/03','07/04','07/05','07/06','07/07','07/08','07/09','07/10','07/11','07/12','07/13','07/14','07/15','07/16','07/17','07/18','07/19','07/20','07/21']
+	    },
+	    yAxis: {
+	    	gridLineWidth: 0, //去掉y轴刻度线
+	    	
+	        title: {
+	            text: "单位（人）"
+	        }
+//	        labels: {
+//              enabled: false //y轴隐藏
+//          }   
+	    },
+	    colors: ['#28CEA5'] ,
+	    credits: {
+            enabled:false
+        },//去掉版权
+	    tooltip: {
+	        shared: true,
+	        valueSuffix: ' 人'
+	    },
+	    plotOptions: {
+	        areaspline: {
+	            fillOpacity: 0.5
+	        }
+	    },
+//	    plotOptions: {
+//	        series: {
+//	            fillColor: {
+//	                linearGradient: [300, 0, 0, 300],
+//	                stops: [
+//	                    [0, Highcharts.getOptions().colors[0]],
+//	                    [1, Highcharts.Color(Highcharts.getOptions().colors[0]).setOpacity(0).get('rgba')]
+//	                ]
+//	            }
+//	        }
+//	    },
+	    series: [{
+	        name: '出勤',
+	        data: [30, 40, 30, 50, 40, 10, 12,30, 40, 30, 50, 40, 10, 12,30, 40, 30, 50, 40, 40, 12]
+	    }]
+    });
+    
+    //体能素质
+    var chart = Highcharts.chart('tnsz_chart', {
+		chart: {
+				polar: true,
+				type: 'line',
+				borderRadius:"10px",
+				backgroundColor:'#F8F8F8',
+				plotBackgroundImage:'img/bg_tnsz.jpg'
+		},
+		title: {
+				text: '体能素质情况',
+				style: {
+		        	color: "#88D994",
+		        	fontWeight: "600"
+		        }
+		},
+		pane: {
+				size: '80%'
+		},
+		xAxis: {
+				categories: ['力量', '速度', '灵敏与协调', '柔韧','平衡', '耐力'],
+				tickmarkPlacement: 'on',
+				lineWidth: 0,
+				gridLineColor:"#fff",
+				labels: {
+					style: {
+						color : '#fff',
+						fontSize: '18px'
+					}
+				}
+		},
+		yAxis: {
+				gridLineInterpolation: 'polygon',
+				lineWidth: 0,
+				gridLineColor:"#fff",
+				min: 0,
+				labels: {
+					style: {
+						color : '#fff',
+						fontSize: '14px'
+					}
+				}
+		},
+		colors: ['#00CB8C', '#50B432'] ,
+		credits: {
+            enabled:false
+        },//去掉版权
+		tooltip: {
+				shared: true,
+				pointFormat: '<span style="color:{series.color}">{series.name}: <b> {point.y:,.0f}</b><br/>'
+		},
+		legend: {
+				align: 'right',
+				verticalAlign: 'top',
+				y: 70,
+				layout: 'vertical',
+				enabled: false
+		},
+		series: [{
+				name: "单位",
+				data: [15, 50, 16, 30, 50, 18],
+				pointPlacement: 'on'
+		}]
+	});
+	
+	//运动量班级排行榜
+	var chart = Highcharts.chart('ydl_chart',{
+	    chart: {
+	        type: 'column'
+	    },
+	    title: {
+	        text: '运动密度情况',
+	        style: {
+	        	color: "#8DBC92",
+	        	fontWeight: "600"
+	        }
+	    },
+	    
+	    labels: {
+            formatter: function () {
+                return this.value + '%';
+            }
+        },
+	    xAxis: {
+	        categories: ['07/01','07/02','07/03','07/04','07/05','07/06','07/07','07/08','07/09','07/10','07/11','07/12','07/13','07/14','07/15','07/16','07/17','07/18','07/19','07/20','07/21'],
+	        crosshair: true
+	    },
+	    yAxis: {
+	        min: 0,
+	        title: {
+	            text: '百分比 (%)'
+	        }
+	    },
+	    legend: {
+				enabled: false
+		},
+	    credits: {
+            enabled:false
+        },//去掉版权
+	    tooltip: {
+	        // head + 每个 point + footer 拼接成完整的 table
+	        headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
+	        pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
+	        '<td style="padding:0"><b>{point.y:.1f} %</b></td></tr>',
+	        footerFormat: '</table>',
+	        shared: true,
+	        useHTML: true
+	    },
+	    plotOptions: {
+	        column: {
+	            borderWidth: 0,
+	            pointWidth:10,
+	            borderRadius:"4px"
+	        }
+	    },
+	    series: [{
+	        name: '运动密度',
+	        data: [ {'color':'#8DBC92','y':58}, 
+		            {'color':'#FFFAC2','y':60}, 
+		            {'color':'#F6BEAD','y':70}, 
+		            {'color':'#B884AA','y':89}, 
+		            {'color':'#6CD6FE','y':45}, 
+		            {'color':'#F3E1E1','y':80}, 
+		            {'color':'#8E468E','y':60}, 
+		            {'color':'#F9DCE1','y':58}, 
+		            {'color':'#8BBA00','y':45}, 
+		            {'color':'#008E8E','y':38}, 
+		            {'color':'#008E8E','y':58}, 
+		            {'color':'#D8EAEE','y':89}, 
+		            {'color':'#8E468E','y':45}, 
+		            {'color':'#AFD8F8','y':45}, 
+		            {'color':'#00CB8C','y':89}, 
+		            {'color':'#FF8E46','y':52}, 
+		            {'color':'#008E8E','y':51}, 
+		            {'color':'#8370F0','y':56}, 
+		            {'color':'#67E9BD','y':56}]
+	    }]
+	});
+</script>
+</html>	

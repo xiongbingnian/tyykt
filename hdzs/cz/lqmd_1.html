@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="renderer" content="webkit" >
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+    <title>体育云课堂</title>
+    <link rel="stylesheet" href="../../css/hdzs.css">
+    <!--[if lt IE 9]>
+    <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <![endif]-->
+</head>
+<body class="bg_373B47">
+	<div class="cont">
+		<div class="header">
+			<img src="../../img/hdzs/logo.png" alt="" />
+			<h2>篮球灭灯</h2>
+		</div>
+		<div class="md_group_box">
+			<div>
+				<ul class="md_group_list">
+					<li class="md_group_1">
+						<h3>第一组</h3>
+						<div>灭灯次数</div>
+						<b>93</b>
+					</li>
+					<li class="md_group_2">
+						<h3>第二组</h3>
+						<div>灭灯次数</div>
+						<b>93</b>
+					</li>
+					<li class="md_group_3">
+						<h3>第三组</h3>
+						<div>灭灯次数</div>
+						<b>93</b>
+					</li>
+					<li class="md_group_4">
+						<h3>第四组</h3>
+						<div>灭灯次数</div>
+						<b>93</b>
+					</li>
+				</ul>
+				<ul class="d_list">
+					<li>
+						<img src="../../img/hdzs/red_yq.png" alt="" />
+					</li>
+					<li>
+						<img src="../../img/hdzs/red_yq.png" alt="" />
+					</li>
+					<li>
+						<img src="../../img/hdzs/red_yq.png" alt="" />
+					</li>
+					<li>
+						<img src="../../img/hdzs/yellow_yq.png" alt="" />
+					</li>
+					<li>
+						<img src="../../img/hdzs/yellow_yq.png" alt="" />
+					</li>
+					<li>
+						<img src="../../img/hdzs/yellow_yq.png" alt="" />
+					</li>
+					<li>
+						<img src="../../img/hdzs/gray_yq.png" alt="" />
+					</li>
+					<li>
+						<img src="../../img/hdzs/gray_yq.png" alt="" />
+					</li>
+					<li>
+						<img src="../../img/hdzs/blue_yq.png" alt="" />
+					</li>
+					<li>
+						<img src="../../img/hdzs/blue_yq.png" alt="" />
+					</li>
+					<li>
+						<img src="../../img/hdzs/blue_yq.png" alt="" />
+					</li>
+					<li>
+						<img src="../../img/hdzs/green_yq.png" alt="" />
+					</li>
+					<li>
+						<img src="../../img/hdzs/green_yq.png" alt="" />
+					</li>
+					<li>
+						<img src="../../img/hdzs/green_yq.png" alt="" />
+					</li>
+					<li>
+						<img src="../../img/hdzs/gray_yq.png" alt="" />
+					</li>
+					<li>
+						<img src="../../img/hdzs/gray_yq.png" alt="" />
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="js_hdsm_box">
+			<div class="js_box">
+				<img src="../../img/hdzs/i_clock.png" alt="" />
+				<div class="js">
+					<span class="min">00</span>:<span class="ms">00</span>.<span class="hm">00</span>
+				</div>
+			</div>
+			<div class="hdsm_box">
+				<h4>活动说明：</h4>
+				<p>活动分4组，每个组代表一种颜色，每个组的人要扑灭本组同颜色的灯，在一定时间内，灭灯次数最多的胜出</p>
+			</div>
+		</div>
+	</div>
+
+<script src="../../js/jquery-1.11.3.min.js"></script>
+<script type="text/javascript">
+	//计时
+	$(document).ready(function() {
+		var times = 120 * 100; // 120秒 2分钟
+		countTime = setInterval(function() {
+			times = --times < 0 ? 0 : times;
+			
+			var min = Math.floor(times / 100 / 60).toString();
+			if(min.length <= 1) {
+				min = "0" + min;
+			}
+			
+			var ms = Math.floor(times / 100 %60).toString();
+			if(ms.length <= 1) {
+				ms = "0" + ms;
+			}
+			
+			var hm = Math.floor(times % 100).toString();
+			if(hm.length <= 1) {
+				hm = "0" + hm;
+			}
+			if(times == 0) {
+				clearInterval(countTime);
+				//alert("游戏结束");
+			}
+			// 获取分钟、秒、毫秒数
+			$(".min").html(min);
+			$(".ms").html(ms);
+			$(".hm").html(hm);
+		}, 10);
+	});
+</script>
+</body>
+</html>	

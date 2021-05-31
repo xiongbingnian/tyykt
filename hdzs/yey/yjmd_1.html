@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="renderer" content="webkit" >
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+    <title>体育云课堂</title>
+    <link rel="stylesheet" href="../../css/hdzs.css">
+    <!--[if lt IE 9]>
+    <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <![endif]-->
+</head>
+<body class="bg_F4F5FA">
+	<div class="cont">
+		<div class="header bg_3E9D87">
+			<img src="../../img/hdzs/logo.png" alt="" />
+			<h2>用脚灭灯</h2>
+		</div>
+		<div class="main bg_md">
+			<ul class="md_list">
+				<li>
+					<div class="cjp cjp_1">
+						<b>13</b>
+					</div>
+					<img src="../../img/hdzs/yjmd_1.gif" alt="" />
+				</li>
+				<li>
+					<div class="cjp cjp_2">
+						<b>13</b>
+					</div>
+					<img src="../../img/hdzs/yjmd_2.png" alt="" />
+				</li>
+				<li>
+					<div class="cjp cjp_3">
+						<b>05</b>
+					</div>
+					<img src="../../img/hdzs/yjmd_3.png" alt="" />
+				</li>
+				<li>
+					<div class="cjp cjp_4">
+						<b>13</b>
+					</div>
+					<img src="../../img/hdzs/yjmd_4.png" alt="" />
+				</li>
+			</ul>
+		</div>
+		<div class="footer bg_3E9D87">
+			<div class="js_hdsm_box">
+				<div class="hdsm_box">
+					<h4>正在准备，即将开始（第XX轮）</h4>
+					<p>说明：</p>
+					<p>活动分4组，每个组代表一种颜色，每个组的人要扑灭本组同颜色的灯，在一定时间内，灭灯次数最多的胜出。</p>
+				</div>
+				<div class="js_box">
+					<i class="i_sz"></i>
+					<div class="js">
+						<span class="min">00</span>:<span class="ms">00</span>.<span class="hm">00</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="../../js/jquery-1.11.3.min.js"></script>
+	<script type="text/javascript">
+		//计时
+		$(document).ready(function() {
+			var times = 120 * 100; // 120秒 2分钟
+			countTime = setInterval(function() {
+				times = --times < 0 ? 0 : times;
+				
+				var min = Math.floor(times / 100 / 60).toString();
+				if(min.length <= 1) {
+					min = "0" + min;
+				}
+				
+				var ms = Math.floor(times / 100 %60).toString();
+				if(ms.length <= 1) {
+					ms = "0" + ms;
+				}
+				
+				var hm = Math.floor(times % 100).toString();
+				if(hm.length <= 1) {
+					hm = "0" + hm;
+				}
+				if(times == 0) {
+					clearInterval(countTime);
+					//alert("游戏结束");
+				}
+				// 获取分钟、秒、毫秒数
+				$(".min").html(min);
+				$(".ms").html(ms);
+				$(".hm").html(hm);
+			}, 10);
+		});
+	</script>
+</body>
+</html>	

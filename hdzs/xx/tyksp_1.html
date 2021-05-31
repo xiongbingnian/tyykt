@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="renderer" content="webkit" >
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+    <title>体育云课堂</title>
+    <link rel="stylesheet" href="../../css/hdzs.css">
+    <!--[if lt IE 9]>
+    <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <![endif]-->
+</head>
+<body class="bg_F4F5FA">
+	<div class="cont">
+		<div class="header bg_EEE6D5">
+			<img src="../../img/hdzs/tyksp_logo.png" alt="" />
+			<h2 class="color_5A839B">体验快速跑</h2>
+		</div>
+		<div class="main bg_tyksp p_r">
+			<div class="tyksp_js_hdsm">
+				<div class="js_box">
+					<i class="i_sz"></i>
+					<div class="js">
+						<span class="min">00</span>:<span class="ms">00</span>.<span class="hm">00</span>
+					</div>
+				</div>
+				<p>
+					活动分4组，每次每个组派1人参加30米跑，共分8次跑完。最后，每个组的累计时间最少的胜出。
+				</p>
+			</div>
+			<img class="tyksp_img" src="../../img/hdzs/tyksp_on.gif" alt="" />
+			<ul class="tyksp_list">
+				<li>
+					<div class="name">王昊</div>
+					<b class="tyksp_cj">05.28"</b>
+				</li>
+				<li>
+					<div class="name">李志</div>
+					<b class="tyksp_cj">05.25"</b>
+				</li>
+				<li>
+					<div class="name">陈佳丽</div>
+					<b class="tyksp_cj">05.26"</b>
+				</li>
+				<li>
+					<div class="name">陈星星</div>
+					<b class="tyksp_cj">05.24"</b>
+				</li>
+			</ul>
+		</div>
+		<div class="footer bg_EEE6D5">
+			<div class="l_sm">正在准备，即将开始（第XX轮）</div>
+			<div class="r_sm">
+				<h3>下组准备（11/20）</h3>
+				<p>学生5、学生6、学生7</p>
+			</div>
+		</div>
+	</div>
+	<script src="../../js/jquery-1.11.3.min.js"></script>
+	<script type="text/javascript">
+		//计时
+		$(document).ready(function() {
+			var times = 120 * 100; // 120秒 2分钟
+			countTime = setInterval(function() {
+				times = --times < 0 ? 0 : times;
+				
+				var min = Math.floor(times / 100 / 60).toString();
+				if(min.length <= 1) {
+					min = "0" + min;
+				}
+				
+				var ms = Math.floor(times / 100 %60).toString();
+				if(ms.length <= 1) {
+					ms = "0" + ms;
+				}
+				
+				var hm = Math.floor(times % 100).toString();
+				if(hm.length <= 1) {
+					hm = "0" + hm;
+				}
+				if(times == 0) {
+					clearInterval(countTime);
+					//alert("游戏结束");
+				}
+				// 获取分钟、秒、毫秒数
+				$(".min").html(min);
+				$(".ms").html(ms);
+				$(".hm").html(hm);
+			}, 10);
+		});
+		
+		//
+//		setTimeout(function(){
+//			var time = 5000;
+//			$(".tyksp_img_1").attr('src', '../../img/hdzs/tyksp_1.gif').animate({left:'80%'},time);
+//			setTimeout(function(){
+//				$(".tyksp_img_1").hide();
+//				$(".tyksp_img_1").next().show();
+//			},time)
+//		},1000)
+//		setTimeout(function(){
+//			var time = 4000;
+//			$(".tyksp_img_2").attr('src', '../../img/hdzs/tyksp_2.gif').animate({left:'80%'},time);
+//			setTimeout(function(){
+//				$(".tyksp_img_2").hide();
+//				$(".tyksp_img_2").next().show();
+//			},time)
+//		},1000)
+//		setTimeout(function(){
+//			var time = 4500;
+//			$(".tyksp_img_3").attr('src', '../../img/hdzs/tyksp_3.gif').animate({left:'80%'},time);
+//			setTimeout(function(){
+//				$(".tyksp_img_3").hide();
+//				$(".tyksp_img_3").next().show();
+//			},time)
+//		},1000)
+//		setTimeout(function(){
+//			var time = 3000;
+//			$(".tyksp_img_4").attr('src', '../../img/hdzs/tyksp_4.gif').animate({left:'80%'},time);
+//			setTimeout(function(){
+//				$(".tyksp_img_4").hide();
+//				$(".tyksp_img_4").next().show();
+//			},time)
+//		},1000)
+		
+	</script>
+</body>
+</html>	

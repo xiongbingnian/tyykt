@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="renderer" content="webkit" >
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+    <title>体育云课堂</title>
+    <link rel="stylesheet" href="../../css/hdzs.css">
+    <!--[if lt IE 9]>
+    <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <![endif]-->
+</head>
+<body class="bg_373B47">
+	<div class="cont">
+		<div class="header">
+			<img src="../../img/hdzs/logo.png" alt="" />
+			<h2>30米跑</h2>
+		</div>
+		<div class="pd_box">
+			<ul class="pd_list pd_list_2">
+				<li class="color_FFF16D">
+					<img src="../../img/hdzs/yellow_people.gif" alt="" />
+					<h3>第一组</h3>
+					<div class="name">王钉钉</div>
+					<div class="time">
+						<span class="min">0</span>:<span class="ms">0</span>.<span class="hm">00</span>
+					</div>
+				</li>
+				<li class="color_A8EE69">
+					<img src="../../img/hdzs/green_people.gif" alt="" />
+					<h3>第二组</h3>
+					<div class="name">李小燕</div>
+					<div class="time">
+						<span class="min">0</span>:<span class="ms">0</span>.<span class="hm">00</span>
+					</div>
+				</li>
+				<li class="color_FFA7A6">
+					<img src="../../img/hdzs/red_people.gif" alt="" />
+					<h3>第三组</h3>
+					<div class="name">张来来</div>
+					<div class="time">
+						<span class="min">0</span>:<span class="ms">0</span>.<span class="hm">00</span>
+					</div>
+				</li>
+				<li class="color_92C3FE">
+					<img src="../../img/hdzs/blue_people.gif" alt="" />
+					<h3>第四组</h3>
+					<div class="name">张三丰</div>
+					<div class="time">
+						<span class="min">0</span>:<span class="ms">0</span>.<span class="hm">00</span>
+					</div>
+				</li>
+			</ul>
+		</div>
+		<div class="xlzb_box">
+			<div class="xlzb">
+				<h5 class="xlzb_title">下轮准备（11/20）：</h5>
+				<div>
+					<span>陈子涵、</span>
+					<span>张德、</span>
+					<span>王五、</span>
+					<span>李德光</span>
+				</div>
+			</div>
+			<div class="hdsm_box">
+				<h4>活动说明：</h4>
+				<p>活动分4组，每次每个组派一人参加30米跑，共分8次跑完。最后，每个组的累计时间最少的胜出</p>
+			</div>
+		</div>
+	</div>
+
+<script src="../../js/jquery-1.11.3.min.js"></script>
+<script>
+	$(document).ready(function() {
+		//生成时间
+		var min=0;
+		var sec=0;
+		var ms=0;
+		var timer=null;
+		var count=0;
+		function show(){
+			ms++;
+			if(sec==60){
+				min++;sec=0;
+			}
+			if(ms==100){
+				sec++;ms=0;
+			}
+			var msStr=ms;
+			if(ms<10){
+				msStr="0"+ms;
+			}
+			var secStr=sec;
+			if(sec<10){
+				secStr="0"+sec;
+			}
+			var minStr=min;
+			if(min<10){
+				minStr="0"+min;
+			} 
+			$('.min').html(minStr);
+			$('.ms').html(secStr);
+			$('.hm').html(msStr);
+		}
+		timer=setInterval(show,10);
+		
+		//停止定时器的方法
+//		setTimeout(function(){
+//			clearInterval(timer);
+//		},3000)
+	})
+	
+</script>
+</body>
+</html>	
